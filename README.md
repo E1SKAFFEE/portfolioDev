@@ -7,6 +7,29 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
+## Code Formatting & Linting
+
+This project uses:
+- **Prettier** for code formatting (with semicolons enforced)
+- **ESLint** for code quality rules
+- **TypeScript strict mode** for type safety (generics required for useState)
+
+### IntelliJ/WebStorm Configuration
+
+To enable automatic formatting on save (Ctrl+S):
+
+1. Open **Settings** → **Languages & Frameworks** → **JavaScript** → **Prettier**
+   - Enable "Run on save"
+   - Enable "Run on reformat code"
+
+2. Open **Settings** → **Languages & Frameworks** → **TypeScript** → **ESLint**
+   - Enable ESLint
+
+3. The project will now:
+   - Add semicolons automatically on save
+   - Format code according to `.prettierrc.json`
+   - Require explicit generics types for React hooks (e.g., `useState<number>(0)`)
+
 ## React Compiler
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
