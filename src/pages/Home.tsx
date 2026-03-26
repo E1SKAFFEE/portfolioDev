@@ -1,9 +1,10 @@
+import { FC } from 'react';
 import { Container, Typography } from '@mui/material';
 
-export function Home() {
+export const Home: FC = () => {
   return (
-    <Container>
+    <>
       <Typography>Welcome to the Home Page</Typography>
-    </Container>
+    </>
   );
-}
+};
